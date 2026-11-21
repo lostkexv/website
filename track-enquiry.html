@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090a12">
+    <title>Track an Enquiry | Keshav Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header"><a class="brand" href="index.html#home"><span class="brand-mark"><span>KA</span><img src="assets/images/White KA Monogram Orbit Logo.png" alt="" onerror="this.remove()"></span><span class="brand-name">KESHAV <small>ASSOCIATES</small></span></a><a class="nav-cta" href="index.html#contact">Contact <span>↗</span></a></header>
+    <main class="tracking-page">
+        <a class="back-link" href="index.html">← Back to home</a>
+        <div class="tracking-card">
+            <p class="eyebrow">CUSTOMER SUPPORT / TRACKING</p>
+            <h1>Track your<br><em>enquiry.</em></h1>
+            <p class="tracking-description">A secure enquiry tracking portal is planned for Keshav Associates. It will let customers check updates using a reference number and an additional verification step.</p>
+            <div class="tracking-status"><span class="status-dot"></span><div><strong>Tracking portal setup is pending</strong><p>The website needs a connected database and secure customer verification before enquiry records can be accessed.</p></div></div>
+            <form id="tracking-form" class="tracking-form">
+                <label for="reference-id">Enquiry reference number</label>
+                <input id="reference-id" name="reference" type="text" placeholder="For example, KA-XXXXXX" disabled>
+                <button class="button button-primary" type="submit" disabled>Track enquiry <span>↗</span></button>
+                <p class="form-note">This is a preview only. No reference numbers or customer records are being stored yet.</p>
+            </form>
+            <div class="tracking-contact-links"><a class="line-link" href="tel:+911752910784">Call 0175-291-0784 <span>↗</span></a><a class="line-link" href="mailto:keshavassociates4@gmail.com">Email Keshav Associates <span>↗</span></a><a class="line-link" href="https://maps.app.goo.gl/44dGacqJNk7krKvF7" target="_blank" rel="noopener">Get directions <span>↗</span></a></div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="footer-bottom"><span>© <span id="current-year"></span> Keshav Associates</span><span>PATIALA, PUNJAB, INDIA</span></div></footer>
+    <script src="config.js"></script>
+    <script>document.getElementById("current-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

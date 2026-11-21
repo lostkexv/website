@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090a12">
+    <meta name="description" content="Keshav Associates, Patiala: LIC policy assistance, vehicle insurance, identity and online form assistance, money transfer, ticket bookings, printing and document services.">
+    <title>Keshav Associates — Support, Simplified</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/White KA Monogram Orbit Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cinematic.css">
+</head>
+<body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header" id="top">
+        <a class="brand" href="#home" aria-label="Keshav Associates home">
+            <span class="brand-mark"><span>KA</span><img src="assets/images/White KA Monogram Orbit Logo.png" alt="" onerror="this.remove()"></span>
+            <span class="brand-name">KESHAV <small>ASSOCIATES</small></span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#updates">Updates</a>
+            <a class="nav-link" href="#faq">FAQ</a>
+            <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <div class="hero-backdrop" aria-hidden="true"></div>
+            <canvas id="hero-gl" aria-hidden="true"></canvas>
+            <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+            <div class="hero-grid-lines" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-rule"></span> SERVICE, WITH CLARITY</p>
+                    <p class="hero-kicker" id="hero-kicker">Thoughtful assistance for everyday needs.</p>
+                    <h1 id="hero-title">Support,<br><em>simplified.</em></h1>
+                    <p class="hero-description" id="hero-description">From insurance and financial assistance to online documentation, we're here to make everyday services easier to navigate.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#services">Explore services <span>↗</span></a>
+                        <a class="button button-quiet" href="#about">Discover Keshav <span>↓</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <div class="hero-art-orbit orbit-a"></div>
+                    <div class="hero-art-orbit orbit-b"></div>
+                    <div class="hero-art-disc"></div>
+                    <div class="hero-art-glass"></div>
+                    <div class="hero-art-letter">K<span>A</span></div>
+                    <div class="hero-art-caption"><span>KA / 001</span><span>PATIALA, INDIA</span></div>
+                </div>
+
+                <div class="hero-bottom">
+                    <div class="hero-categories"><span>INSURANCE</span><i>·</i><span>FINANCIAL ASSISTANCE</span><i>·</i><span>DOCUMENTATION</span></div>
+                    <div class="hero-slider-controls">
+                        <span class="slide-count"><b id="slide-current">01</b> / 03</span>
+                        <div class="slide-dots" aria-label="Choose hero slide">
+                            <button class="slide-dot active" type="button" data-slide="0" aria-label="Show slide 1"></button>
+                            <button class="slide-dot" type="button" data-slide="1" aria-label="Show slide 2"></button>
+                            <button class="slide-dot" type="button" data-slide="2" aria-label="Show slide 3"></button>
+                        </div>
+                        <div class="slide-arrows">
+                            <button type="button" id="slide-prev" aria-label="Previous slide">←</button>
+                            <button type="button" id="slide-next" aria-label="Next slide">→</button>
+                        </div>
+                    </div>
+                </div>
+                <span class="hero-scroll-hint">SCROLL TO EXPLORE ↓</span>
+            </div>
+        </section>
+
+        <!-- ================= LOCATION / HOURS STRIP ================= -->
+        <section class="info-strip" aria-label="Business information">
+            <div class="info-strip-item"><span class="info-icon">◎</span><div><small>BASED IN</small><strong>Patiala, Punjab</strong></div></div>
+            <div class="info-strip-item"><span class="info-icon">◷</span><div><small>OPEN EVERY DAY</small><strong>8:00 AM – 9:00 PM</strong></div></div>
+            <a class="info-strip-link" id="directions-link" href="https://maps.app.goo.gl/44dGacqJNk7krKvF7" target="_blank" rel="noopener">Get directions <span>↗</span></a>
+        </section>
+
+        <!-- Animated service ticker: continuously previews the services available. -->
+        <div class="service-marquee" aria-label="Keshav Associates services">
+            <div class="marquee-track">
+                <span>LIC POLICY SERVICES</span><i>✳</i><span>PASSPORT APPLICATION</span><i>✳</i><span>PAN &amp; AADHAAR</span><i>✳</i><span>TRAVEL BOOKINGS</span><i>✳</i><span>PRINT &amp; DOCUMENTS</span><i>✳</i>
+                <span aria-hidden="true">LIC POLICY SERVICES</span><i aria-hidden="true">✳</i><span aria-hidden="true">PASSPORT APPLICATION</span><i aria-hidden="true">✳</i><span aria-hidden="true">PAN &amp; AADHAAR</span><i aria-hidden="true">✳</i><span aria-hidden="true">TRAVEL BOOKINGS</span><i aria-hidden="true">✳</i><span aria-hidden="true">PRINT &amp; DOCUMENTS</span><i aria-hidden="true">✳</i>
+            </div>
+        </div>
+
+        <!-- ================= COLLECTIONS (pinned horizontal showcase; built from config.js) ================= -->
+        <section class="coll" aria-label="Service collections">
+            <div class="coll-pin">
+                <div class="coll-head">
+                    <p class="eyebrow">FIVE WAYS WE CAN HELP</p>
+                    <h2>Browse by<br><em>collection.</em></h2>
+                    <p class="coll-note">Scroll sideways. Open any service for its own page, or browse the whole collection in the finder.</p>
+                </div>
+                <div class="coll-track" id="coll-track"></div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section-pad" id="about">
+            <div class="section-index reveal"><span>01</span><i></i><span>WHO WE ARE</span></div>
+            <div class="about-layout">
+                <div class="about-heading reveal">
+                    <p class="eyebrow">A MORE HUMAN APPROACH</p>
+                    <h2>Good support<br>makes <em>all the<br>difference.</em></h2>
+                </div>
+                <div class="about-copy reveal">
+                    <p class="about-lead">The details matter. Getting help should feel straightforward.</p>
+                    <p>Keshav Associates brings a range of everyday services together in one convenient place in Patiala. From LIC policy assistance and vehicle insurance enquiries to identity-document applications, travel ticket bookings and print services, customers can ask about the support they need without navigating multiple service points.</p>
+                    <p>Our approach is simple: listen to the requirement, explain the available next steps and help with the relevant process. Whether it is an insurance-related enquiry, an online form or a document that needs printing, we aim to make each visit clear and convenient.</p>
+                    <p class="about-thanks">“Thank you for contacting Keshav Associates. We appreciate the opportunity to assist you.”</p>
+                    <a class="line-link" href="#contact">Start a conversation <span>↗</span></a>
+                </div>
+            </div>
+
+            <div class="about-visual reveal" aria-label="Abstract Keshav Associates visual">
+                <div class="about-visual-glow"></div>
+                <div class="about-ring ring-one"></div>
+                <div class="about-ring ring-two"></div>
+                <div class="about-glass-shape"></div>
+                <div class="about-monogram">KA<span>®</span></div>
+                <div class="visual-footer"><span>KE / 001</span><span>MADE FOR CLARITY</span></div>
+            </div>
+
+            <div class="advisor-signature reveal">
+                <div class="advisor-signature-mark">PS</div>
+                <div class="advisor-signature-copy"><small>REGARDS · LIC ADVISORY</small><strong>Parshotam Sharma</strong><span>Sr. Financial Advisor, LIC</span></div>
+                <a class="line-link" href="https://saathi.licindia.co.in/s/parshotam-sharma/0293016y" target="_blank" rel="noopener">View LIC profile <span>↗</span></a>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES / FINDER ================= -->
+        <section class="services section-pad" id="services">
+            <div class="section-index reveal"><span>02</span><i></i><span>WHAT WE CAN HELP WITH</span></div>
+            <div class="section-heading-row reveal">
+                <div><p class="eyebrow">A WIDE RANGE OF EVERYDAY SERVICES</p><h2>One place.<br><em>Many solutions.</em></h2></div>
+                <p class="section-aside">Explore insurance, financial assistance, identity and online form services, travel bookings, and everyday print and document services. Search below to find what you need.</p>
+            </div>
+
+            <div class="service-finder reveal">
+                <label class="search-box" for="service-search"><span class="search-symbol">⌕</span><input id="service-search" type="search" placeholder="Search LIC, passport, PAN, ticket booking..." autocomplete="off"><kbd><span id="service-count">20</span> SERVICES</kbd></label>
+                <div class="filter-row" role="group" aria-label="Filter services">
+                    <button class="filter-chip active" type="button" data-filter="all">All services <span>20</span></button>
+                    <button class="filter-chip" type="button" data-filter="insurance">Insurance <span>04</span></button>
+                    <button class="filter-chip" type="button" data-filter="finance">Financial <span>02</span></button>
+                    <button class="filter-chip" type="button" data-filter="identity">Identity &amp; forms <span>05</span></button>
+                    <button class="filter-chip" type="button" data-filter="travel">Travel <span>03</span></button>
+                    <button class="filter-chip" type="button" data-filter="print">Print &amp; documents <span>06</span></button>
+                </div>
+            </div>
+
+            <div class="service-grid service-grid-dynamic" id="service-grid" aria-live="polite"></div>
+            <p class="search-empty" id="search-empty" hidden>No matching service found. Try another search or <a href="#contact">contact us</a>.</p>
+            <div class="services-footnote reveal"><span>ALSO AVAILABLE</span><p>Looking for something not listed? Ask us about other service requirements. Availability and applicable conditions can be confirmed directly with Keshav Associates.</p><a class="line-link" href="#contact">Ask about another service <span>↗</span></a></div>
+        </section>
+
+        <!-- ================= BRAND STATEMENT ================= -->
+        <section class="statement">
+            <div class="statement-glow" aria-hidden="true"></div>
+            <p class="eyebrow reveal">THE KESHAV ASSOCIATES APPROACH</p>
+            <h2 class="reveal">Less complication.<br><em>More clarity.</em></h2>
+            <p class="statement-note reveal">Practical assistance. Clear communication. A better way forward.</p>
+            <span class="statement-watermark" aria-hidden="true">KA</span>
+        </section>
+
+        <!-- ================= HOW IT WORKS ================= -->
+        <section class="approach section-pad" id="approach">
+            <div class="section-index reveal"><span>03</span><i></i><span>HOW IT WORKS</span></div>
+            <div class="section-heading-row reveal">
+                <div><p class="eyebrow">A STRAIGHTFORWARD EXPERIENCE</p><h2>One step at a<br><em>time.</em></h2></div>
+                <p class="section-aside">Every requirement is different. Start with a conversation and understand the next step for your situation.</p>
+            </div>
+            <div class="steps-grid">
+                <article class="step-card reveal"><span class="step-label">01 / EXPLORE</span><span class="step-number">01</span><h3>Start with<br>your needs.</h3><p>Tell us what you are looking to get done. We can begin by understanding your requirement.</p></article>
+                <article class="step-card reveal"><span class="step-label">02 / ENQUIRE</span><span class="step-number">02</span><h3>Clarify the<br>details.</h3><p>Ask questions and understand the information or next steps relevant to your enquiry.</p></article>
+                <article class="step-card reveal"><span class="step-label">03 / PROCEED</span><span class="step-number">03</span><h3>Move forward<br>with clarity.</h3><p>Get assistance with the relevant service process and what needs to happen next.</p></article>
+            </div>
+        </section>
+
+        <!-- ================= UPDATES ================= -->
+        <section class="updates section-pad" id="updates">
+            <div class="section-index reveal"><span>04</span><i></i><span>NOTES &amp; INFORMATION</span></div>
+            <div class="section-heading-row reveal">
+                <div><p class="eyebrow">STAY INFORMED</p><h2>Good to<br><em>know.</em></h2></div>
+                <p class="section-aside">A place for helpful information, service updates and announcements from Keshav Associates.</p>
+            </div>
+            <div class="updates-empty reveal">
+                <div class="updates-empty-mark">KA<span>/</span>NEWS</div>
+                <div><p class="card-eyebrow">UPDATES COMING SOON</p><h3>Useful information,<br><em>when it matters.</em></h3><p>Announcements and articles will appear here once the first updates are ready to publish.</p></div>
+                <span class="updates-empty-index">01 — 00</span>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="faq section-pad" id="faq">
+            <div class="section-index reveal"><span>05</span><i></i><span>COMMON QUESTIONS</span></div>
+            <div class="faq-layout">
+                <div class="faq-heading reveal"><p class="eyebrow">A FEW THINGS TO KNOW</p><h2>Questions,<br><em>answered.</em></h2><p>Need help with something else? Get in touch and tell us what you need.</p><a class="line-link" href="#contact">Contact Keshav Associates <span>↗</span></a></div>
+                <div class="faq-list reveal">
+                    <details class="faq-item"><summary><span>What services does Keshav Associates offer?</span><i>+</i></summary><p>Services include LIC new policy assistance and policy corrections, car and two-wheeler insurance enquiries, passport applications, Voter Card, PAN Card and Aadhaar-related assistance, online form filling, money transfer, AEPS cash withdrawal, railway, bus and air ticket bookings, photostat, instant passport-size photos, stationery, printouts, lamination and book binding.</p></details>
+                    <details class="faq-item"><summary><span>Where is Keshav Associates located?</span><i>+</i></summary><p>We are at 22-C, Jagdish Colony, Rajpura Road, Patiala, Punjab, India. Use the Get Directions link on this website to open the location in Google Maps.</p></details>
+                    <details class="faq-item"><summary><span>What are the business hours?</span><i>+</i></summary><p>Keshav Associates is open every day, Monday through Sunday, from 8:00 AM to 9:00 PM.</p></details>
+                    <details class="faq-item"><summary><span>How can I contact Keshav Associates?</span><i>+</i></summary><p>Call 0175-291-0784 or email keshavassociates4@gmail.com. You can also visit the business during opening hours.</p></details>
+                    <details class="faq-item"><summary><span>What documents should I bring?</span><i>+</i></summary><p>Requirements vary by service and application. Please contact Keshav Associates before visiting to confirm what is needed for your particular request.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="contact section-pad" id="contact">
+            <div class="section-index reveal"><span>06</span><i></i><span>GET IN TOUCH</span></div>
+            <div class="contact-layout">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">LET'S START A CONVERSATION</p>
+                    <h2>Have a question?<br><em>Let's talk.</em></h2>
+                    <p>Tell us what you need help with. Reach out to Keshav Associates to discuss your requirement and understand the next step.</p>
+                    <div class="contact-detail"><small>VISIT US</small><strong>22-C, Jagdish Colony,<br>Rajpura Road, Patiala,<br>Punjab, India</strong><a id="contact-directions" href="https://maps.app.goo.gl/44dGacqJNk7krKvF7" target="_blank" rel="noopener">Get directions ↗</a></div>
+                    <div class="contact-detail"><small>CALL US</small><strong><a data-business-phone href="tel:+911752910784">0175-291-0784</a></strong></div>
+                    <div class="contact-detail"><small>EMAIL</small><strong><a data-business-email href="mailto:keshavassociates4@gmail.com">keshavassociates4@gmail.com</a></strong></div>
+                    <div class="contact-detail" id="whatsapp-detail" hidden><small>WHATSAPP</small><strong><a id="whatsapp-link" href="#contact" target="_blank" rel="noopener"></a></strong></div>
+                    <div class="contact-detail"><small>BUSINESS HOURS</small><strong>Monday – Sunday</strong><span>8:00 AM – 9:00 PM</span></div>
+                    <div class="advisor-contact-card"><small>REGARDS · LIC ADVISORY</small><strong>Parshotam Sharma</strong><span>Sr. Financial Advisor, LIC</span><a href="https://saathi.licindia.co.in/s/parshotam-sharma/0293016y" target="_blank" rel="noopener">View advisor profile ↗</a></div>
+                </div>
+
+                <form class="contact-form reveal" id="contact-form">
+                    <div class="form-heading"><span>ENQUIRY / 001</span><p>Send us a message</p></div>
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+                    <label for="contact-phone">Phone number</label>
+                    <input id="contact-phone" name="phone" type="tel" placeholder="Your contact number" autocomplete="tel" required>
+                    <label for="contact-email">Your email (optional)</label>
+                    <input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+                    <label for="contact-category">What do you need help with?</label>
+                    <select id="contact-category" name="category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option>LIC New Insurance Policy</option>
+                        <option>Corrections in LIC Policy</option>
+                        <option>Car Insurance</option>
+                        <option>Two-Wheeler Insurance</option>
+                        <option>Money Transfer</option>
+                        <option>Cash Withdrawal — AEPS</option>
+                        <option>Passport Application</option>
+                        <option>Voter Card Services</option>
+                        <option>PAN Card Services</option>
+                        <option>Aadhaar Card Assistance</option>
+                        <option>Online Form Filling</option>
+                        <option>Railway Ticket Booking</option>
+                        <option>Bus Ticket Booking</option>
+                        <option>Air Ticket Booking</option>
+                        <option>Photostat &amp; Photocopy</option>
+                        <option>Instant Passport-Size Photo</option>
+                        <option>Stationery</option>
+                        <option>Printouts</option>
+                        <option>Lamination</option>
+                        <option>Book Binding</option>
+                        <option>Other enquiry</option>
+                    </select>
+                    <label for="contact-message">Your message</label>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Tell us briefly what you need..." required></textarea>
+                    <button class="button button-primary form-submit" type="submit">Prepare enquiry <span>↗</span></button>
+                    <p class="form-note" id="form-note" role="status">Thank you for contacting Keshav Associates. Submitting this form opens a prepared email for you to review and send. Do not include sensitive identity, banking or financial information.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= ENQUIRY TRACKING ================= -->
+        <section class="tracking-prompt">
+            <div><p class="eyebrow">ALREADY CONTACTED US?</p><h2>Keep track of<br><em>your enquiry.</em></h2></div>
+            <div><p>We're preparing a secure way for customers to follow up on submitted enquiries. The tracking portal will be enabled after its private database and verification process are connected.</p><a class="button button-outline" href="track-enquiry.html">Enquiry tracking preview <span>↗</span></a></div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <a class="brand footer-brand" href="#home" aria-label="Keshav Associates home"><span class="brand-mark"><span>KA</span><img src="assets/images/White KA Monogram Orbit Logo.png" alt="" onerror="this.remove()"></span><span class="brand-name">KESHAV <small>ASSOCIATES</small></span></a>
+            <p>Everyday services,<br><em>made simpler.</em></p>
+            <div class="footer-nav"><a href="#about">About</a><a href="#services">Services</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="mailto:keshavassociates4@gmail.com">Email</a><a href="tel:+911752910784">Call</a></div>
+            <a class="back-top" href="#top">BACK TO TOP ↑</a>
+        </div>
+        <div class="footer-bottom"><span>© <span id="current-year"></span> Keshav Associates</span><span>PATIALA, PUNJAB, INDIA</span><span>INSURANCE · FINANCIAL · DOCUMENTATION</span></div>
+    </footer>
+
+    <!-- This button is activated when the official WhatsApp number is added in config.js. -->
+    <a class="whatsapp-float" id="whatsapp-button" href="#contact" target="_blank" rel="noopener" aria-label="Chat with Keshav Associates on WhatsApp" hidden><span>✳</span><small>CHAT WITH US</small></a>
+
+    <!-- Motion libraries (optional: the site still works without them) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+    <script src="cinematic.js"></script>
+</body>
+</html>
