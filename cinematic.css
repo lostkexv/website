@@ -11,22 +11,29 @@ html.lenis, html.lenis body { height: auto; }
 /* WebGL flow field: screen-blended so the hero image (if present) stays visible */
 #hero-gl { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; mix-blend-mode: screen; opacity: .75; pointer-events: none; }
 
-/* Collections: pinned horizontal showcase on desktop, swipe carousel elsewhere */
+/* Collections: pinned horizontal showcase on desktop, swipe carousel elsewhere.
+   The pinned screen is exactly one viewport tall; the panels take whatever height
+   is left under the heading, so nothing is clipped on short windows. */
 .coll { position: relative; padding: 0; background: var(--bg-soft); border-block: 1px solid var(--line); }
-.coll-pin { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 34px; overflow: hidden; padding: 120px 0 50px; }
-.coll-head { padding: 0 max(7vw, 28px); }
-.coll-head h2 { margin-top: 14px; font: 600 clamp(44px, 6vw, 86px)/.95 var(--heading); letter-spacing: -.06em; }
+.coll-pin { height: 100svh; min-height: 520px; display: flex; flex-direction: column; gap: clamp(14px, 3svh, 34px); overflow: hidden; padding: 104px 0 28px; }
+.coll-head { flex: none; padding: 0 max(7vw, 28px); }
+.coll-head h2 { margin-top: 10px; font: 600 clamp(34px, min(6vw, 9svh), 86px)/.95 var(--heading); letter-spacing: -.06em; }
 .coll-head h2 em { color: var(--violet-light); font: 500 1.04em/.9 var(--display); letter-spacing: -.04em; }
-.coll-note { margin-top: 14px; color: var(--muted); font-size: 13px; }
-.coll-track { display: flex; gap: 2vw; padding: 0 max(7vw, 28px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.coll-note { margin-top: 12px; color: var(--muted); font-size: 13px; }
+@media (max-height: 760px) { .coll-note { display: none; } }
+.coll-track { flex: 1; min-height: 0; display: flex; gap: 2vw; padding: 0 max(7vw, 28px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .coll-track::-webkit-scrollbar { display: none; }
 .coll-track.pinned { overflow: visible; scroll-snap-type: none; width: max-content; }
-.coll-panel { flex: 0 0 min(82vw, 860px); height: min(62svh, 520px); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: 16px; padding: clamp(22px, 3vw, 42px); border: 1px solid var(--line); border-radius: 6px; scroll-snap-align: center; background: radial-gradient(circle at var(--x) var(--y), rgba(133,137,237,.45), transparent 56%), linear-gradient(160deg, var(--panel-light), var(--bg-soft)); }
-.coll-count { position: absolute; right: 4%; top: -2%; color: transparent; -webkit-text-stroke: 1px rgba(181,183,255,.38); font: 700 clamp(9rem, 24vw, 20rem)/1 var(--heading); letter-spacing: -.08em; pointer-events: none; }
+.coll-panel { flex: 0 0 min(82vw, 860px); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: clamp(8px, 1.6svh, 16px); padding: clamp(20px, min(3vw, 4svh), 42px); border: 1px solid var(--line); border-radius: 6px; scroll-snap-align: center; background: radial-gradient(circle at var(--x) var(--y), rgba(133,137,237,.45), transparent 56%), linear-gradient(160deg, var(--panel-light), var(--bg-soft)); }
+.coll-count { position: absolute; right: 4%; top: -2%; color: transparent; -webkit-text-stroke: 1px rgba(181,183,255,.38); font: 700 clamp(9rem, min(24vw, 42svh), 20rem)/1 var(--heading); letter-spacing: -.08em; pointer-events: none; }
 .coll-panel .eyebrow, .coll-panel h3, .coll-panel ul, .coll-panel .button { position: relative; }
-.coll-panel h3 { font: 600 clamp(30px, 4vw, 54px)/1.02 var(--heading); letter-spacing: -.05em; }
+.coll-panel h3 { font: 600 clamp(26px, min(4vw, 7svh), 54px)/1.02 var(--heading); letter-spacing: -.05em; }
 .coll-panel ul { display: flex; flex-wrap: wrap; gap: 6px 22px; list-style: none; }
 .coll-panel li a { color: #d3d5e4; font-size: 13px; border-bottom: 1px solid transparent; transition: color .25s, border-color .25s; }
 .coll-panel li a:hover { color: #fff; border-color: var(--violet-light); }
 .coll-panel .button { align-self: flex-start; }
-@media (max-width: 899px) { .coll-pin { min-height: 0; padding: 90px 0 60px; } }
+@media (max-width: 899px) {
+    .coll-pin { height: auto; min-height: 0; padding: 90px 0 60px; }
+    .coll-track { flex: none; }
+    .coll-panel { height: min(62svh, 520px); }
+}
